@@ -64,6 +64,10 @@
 				height: 55px;
 				border-radius: 50% ;
 				background-color: #000;
+				-webkit-transition: -webkit-transform 1s linear;
+				-moz-transition: -moz-transform 1s linear;
+				-ms-transition: -ms-transform 1s linear;
+				transition: transform 1s linear;
 			}
 			.eye-bottom{
 				position: absolute;
@@ -74,7 +78,9 @@
 				border-radius: 40% 40% 50% 50%;
 				background-color:#fbf8f1;
                 -webkit-transition: all 1s linear;
-				
+				-moz-transition: all 1s linear;
+				-ms-transition: all 1s linear;
+				transition: all 1s linear;
 			}
 			.face-red {
                 position: absolute;
@@ -88,7 +94,9 @@
                 background: #e85a5e;
                 opacity: 0.0;
                 -webkit-transition: all 1s linear;
-
+				-moz-transition: all 1s linear;
+				-ms-transition: all 1s linear;
+				transition: all 1s linear;
             }
 			.nose{
 				position: absolute;
@@ -117,6 +125,9 @@
 				margin-top: -26px;
 				border-bottom: 4px solid #000;
 				-webkit-transition: all 1s linear;
+				-moz-transition: all 1s linear;
+				-ms-transition: all 1s linear;
+				transition: all 1s linear;
 			}
 			.mouth-left{
 				left: 0;
@@ -143,7 +154,9 @@
 				height: 100px;
 				border: 2px solid #000;
 				-webkit-transition: -webkit-transform 1s linear;
-				
+				-moz-transition: -moz-transform 1s linear;
+				-ms-transition: -ms-transform 1s linear;
+				transition: transform 1s linear;
 			}
 			.ear-left{
 				margin-left: 10px;
@@ -165,6 +178,9 @@
 			}
 			.container:hover .ear-left {
 				-webkit-transform: rotateZ(-30deg);
+				-moz-transform: rotateZ(-30deg);
+				-ms-transform: rotateZ(-30deg);
+				transform: rotateZ(-30deg);
 			}
 			.container:hover .ear-right {
 				-webkit-transform: rotateZ(30deg);
@@ -174,6 +190,12 @@
 			}
 			.container:hover .face-red{
 				opacity: 0.8;
+			}
+			.container:hover .eye-code{
+				-webkit-transform: scaleY(0.9) translateX(20px);
+				-moz-transform: scaleY(0.9) translateX(20px);
+				-ms-transform: scaleY(0.9) translateX(20px);
+				transform: scaleY(0.9) translateX(20px);
 			}
 		</style>
 	</head>
