@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <style>
+     body{
+     	margin: 0;
+     	padding: 0;
+     	background-color: #000;
+     	overflow: hidden;
+     }
+     .wrap{
+     	position: relative;
+     	width: 1120px;
+     	height: 600px;
+     	margin: 100px auto ;
+     	border: 1px solid #fff;
+     	overflow: hidden;
+     }
+     .box{
+     	width: 100%;
+     	height: 100%;
+     }
+     .box>img{
+     	position: absolute;
+     	width: 1120px;
+     	height: 600px;
+     	display: block;
+     }
+     .bar ul{
+     	position: absolute;
+     	bottom: 0;
+     	margin: 0;
+     	padding: 0;
+     	list-style: none;
+     	z-index: 1;
+     }
+     ul>li{
+     	float: left;
+     	margin-left: 10px;
+     }
+     li>.mar{
+     	position: absolute;
+     	width: 212px;
+     	height: 112px ;
+     	background-color: rgba(0,0,0,.3);
+     	z-index: 1;
+     }
+     li:hover .mar{
+     	z-index: -1;
+     }
+     li>img{
+     	cursor: pointer;
+     	display: block;
+     	padding: 5px;
+     	border: 1px solid #ccc;
+     	width: 200px;
+     	height: 100px;
+     }
+     @-webkit-keyframes img1{
+     	from{left: -1120px;}
+     	to{
+     		left: 0;
+     	}
+     }
+     @-webkit-keyframes img2{
+     	from{top: 600px;}
+     	to{top:0}
+     }
+     @-webkit-keyframes img3{
+     	from{
+     		-webkit-transform: scale(0.1);
+     	}
+     	to{
+     		-webkit-transform: scale(1);
+     	}
+     }
+     @-webkit-keyframes img4{
+     	from{
+     		-webkit-transform: scale(2);
+     	}
+     	to{
+     		-webkit-transform: scale(1);
+     	}
+     }
+     @-webkit-keyframes img5{
+     	from {
+                -webkit-transform: rotate(-360deg) scale(0.1);
+            }
+        to  {
+                -webkit-transform: rotate(0deg) scale(1);
+            }
+     }
+     
+     /*IE浏览器兼容*/
+     @-ms-keyframes img1{
+     	from{left: -1120px;}
+     	to{
+     		left: 0;
+     	}
+     }
+     @-ms-keyframes img2{
+     	from{top: 600px;}
+     	to{top:0}
+     }
+     @-ms-keyframes img3{
+     	from{
+     		-ms-transform: scale(0.1);
+     	}
+     	to{
+     		-ms-transform: scale(1);
+     	}
+     }
+     @-ms-keyframes img4{
+     	from{
+     		-ms-transform: scale(2);
+     	}
+     	to{
+     		-ms-transform: scale(1);
+     	}
+     }
+     @-ms-keyframes img5{
+     	from {
+                -ms-transform: rotate(-360deg) scale(0.1);
+            }
+        to  {
+                -ms-transform: rotate(0deg) scale(1);
+            }
+     }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+    	<div class="box"><img src="img/pic (38).jpg" alt="汽车" /></div>
+    	<div class="bar">
+    	<ul>
+    		<li><div class="mar"></div><img src="img/pic (8).jpg" alt="汽车" /></li>
+    		<li><div class="mar"></div><img src="img/pic (38).jpg" alt="汽车" /></li>
+    		<li><div class="mar"></div><img src="img/pic (17).jpg" alt="汽车" /></li>
+    		<li><div class="mar"></div><img src="img/pic (44).jpg" alt="汽车" /></li>
+    		<li><div class="mar"></div><img src="img/pic (47).jpg" alt="汽车" /></li>
+    	</ul>
+    	</div>
+    </div>
+    <script type="text/javascript">
+    	(function(){
+    		let wrap = document.querySelector(".wrap");
+    		let Box = wrap.querySelector(".box");
+    		let bImg = Box.querySelector('img');
+    		let Bar = wrap.querySelector(".bar");
+    		let Imglist = Bar.querySelectorAll('img');
+    		console.log(Imglist);
+    		let animation = ['img1 0.5s ease-out','img2 0.5s ease-out','img3 1s ease-in','img4 1s ease-out','img5 0.7s ease-in-out'];
+    		let len = Imglist.length;
+    		Array.prototype.forEach.call(Imglist,function(val,index){     //数组的prototype属性forEach遍历
+    			val.onclick = function(){
+    				bImg.src=this.getAttribute('src');
+    				bImg.style.animation = animation[index];
+    			}
+    		});
+    	})();
+    </script>
+</body>
+</html>
