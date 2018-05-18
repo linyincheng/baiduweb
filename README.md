@@ -12,3 +12,5 @@ Class4： 3D 空间的卡片翻转动效进阶 [源码](https://github.com/linyi
 Class5： 3D 立体旋转（近大远小）[源码](https://github.com/linyincheng/baiduweb/blob/master/class5.html) **&&**[展示](http://linyincheng.club/baiduweb/class5.html)
 
 Class6： 简单的animation制作Slider[源码](https://github.com/linyincheng/baiduweb/blob/master/class6.html) **&&**[展示](http://linyincheng.club/baiduweb/class6.html)
+
+Class7： 使用 animate.css 实现一个优雅的登录框[源码](https://github.com/linyincheng/baiduweb/blob/master/class7.html) **&&**[展示](http://linyincheng.club/baiduweb/class7.html)
